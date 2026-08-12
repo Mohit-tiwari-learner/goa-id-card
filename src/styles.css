@@ -1,0 +1,127 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * HH GOA 2026 design system.
+ * Palette: deep goa green, dark green, bright yellow, pink, off white, black.
+ * All colors are semantic tokens. Never hardcode hex in components.
+ */
+
+@theme inline {
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+  --font-display: "DM Serif Display", "Bodoni Moda", serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+  --font-deva: "Baloo 2", "DM Serif Display", serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-goa-green: var(--goa-green);
+  --color-goa-dark: var(--goa-dark);
+  --color-goa-yellow: var(--goa-yellow);
+  --color-goa-pink: var(--goa-pink);
+  --color-goa-cream: var(--goa-cream);
+  --color-goa-ink: var(--goa-ink);
+}
+
+:root {
+  --radius: 0px;
+  --goa-green: oklch(0.487 0.126 158.5);
+  --goa-dark: oklch(0.371 0.099 158.9);
+  --goa-yellow: oklch(0.888 0.181 96.2);
+  --goa-pink: oklch(0.647 0.276 356.5);
+  --goa-cream: oklch(0.965 0.019 95.5);
+  --goa-ink: oklch(0.204 0.021 152.9);
+
+  --background: var(--goa-green);
+  --foreground: var(--goa-yellow);
+  --card: var(--goa-dark);
+  --card-foreground: var(--goa-cream);
+  --popover: var(--goa-dark);
+  --popover-foreground: var(--goa-cream);
+  --primary: var(--goa-yellow);
+  --primary-foreground: var(--goa-ink);
+  --secondary: var(--goa-dark);
+  --secondary-foreground: var(--goa-yellow);
+  --muted: var(--goa-dark);
+  --muted-foreground: oklch(0.82 0.06 100);
+  --accent: var(--goa-pink);
+  --accent-foreground: var(--goa-cream);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--goa-cream);
+  --border: var(--goa-yellow);
+  --input: var(--goa-dark);
+  --ring: var(--goa-yellow);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-mono);
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-goa-pink);
+    color: var(--color-goa-cream);
+  }
+}
+
+/* Subtle print-like noise texture overlay */
+@utility grain {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.16;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@utility label-mono {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+}
+
+@utility ticket-border {
+  border: 3px solid var(--color-goa-ink);
+  box-shadow: 0 0 0 3px var(--color-goa-pink);
+}

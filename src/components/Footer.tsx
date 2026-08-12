@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 
 const links = [
-  { label: "X / TWITTER", href: "https://x.com/intent/tweet?text=%23FrameInGoa" },
-  { label: "INSTAGRAM", href: "https://instagram.com" },
-  { label: "MAIL US", href: "mailto:hello@247pm.studio" },
+  { label: "X / TWITTER", href: "https://x.com/Mohit_4_you" },
+  { label: "INSTAGRAM", href: "https://www.instagram.com/mohit____tiwari______/?hl=en" },
+  { label: "MAIL US", href: "mailto:mohit200409tiwari@gmail.com" },
 ];
 
 export function Footer() {

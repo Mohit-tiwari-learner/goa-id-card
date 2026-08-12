@@ -884,15 +884,7 @@ Before finishing:
 
 Make the final result feel Awwwards-level, experimental, playful, Indian, tropical, and unmistakably HH Goa.
 
-This project was built with [Lovable](https://lovable.dev).
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/f96ebc32-aa6e-451b-8a64-682870fdda1e).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
